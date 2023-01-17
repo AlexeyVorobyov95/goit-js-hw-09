@@ -67,6 +67,13 @@ class Timer {
       hours.textContent = timeComponents.hours;
       seconds.textContent = timeComponents.seconds;
       minutes.textContent = timeComponents.minutes;
+
+      if (deltaTime <= 0) {
+        days.textContent = '00';
+        hours.textContent = '00';
+        minutes.textContent = '00';
+        seconds.textContent = '00';
+      }
     }, 1000);
   }
 }
